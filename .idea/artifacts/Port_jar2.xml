@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Port:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Port_jar2</output-path>
+    <root id="archive" name="Port.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Port" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/log4j-1.2.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
