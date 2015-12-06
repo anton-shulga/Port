@@ -72,7 +72,7 @@ public class Ship implements Runnable {
 			}
 		} finally {
 			if (isLockedBerth){
-				Thread.sleep(500);
+				Thread.sleep(1000);
 				port.unlockBerth(this);
 				logger.debug("Корабль " + name + " отошел от причала " + berth.getId());
 			}
@@ -165,4 +165,13 @@ public class Ship implements Runnable {
 	}
 
 	public Warehouse getWarehouse() {return shipWarehouse;}
+
+	public void waitForDispatch()
+	{
+		try {
+			Thread.sleep(200 );
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -37,16 +37,14 @@ public class Dispatcher implements Runnable {
     }
 
     private void logMessage() {
-
         Map<Ship, Berth> berths = port.getUsedBerths();
         Warehouse warehouse = port.getPortWarehouse();
         BlockingQueue<Berth> emptyBetrhs = port.getEmptyBerths();
-
         logger.debug("На складе порта хранится " + warehouse.getRealSize() + " контейнеров");
 
         for (Map.Entry<Ship, Berth> pair : berths.entrySet()) {
             logger.debug("Корабль " + pair.getKey().getName() + " находится у причала " + pair.getValue().getId() + ". "
-                  + "На корабле хранится " + pair.getKey().getWarehouse().getRealSize() + " контейнеров");
+                    + "На корабле хранится " + pair.getKey().getWarehouse().getRealSize() + " контейнеров");
         }
 
         for (Berth berth : emptyBetrhs) {
